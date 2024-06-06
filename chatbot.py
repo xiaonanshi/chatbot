@@ -69,3 +69,5 @@ else:# for demo purpose
     if user_question:
         response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my GitHub: https://github.com/xiaonanshi/chatbot."
         st.write(response)
+
+#original code from @Aakriti E-Learning Academy on Udemy
