@@ -1,4 +1,5 @@
 import streamlit as st
+#comment all following for streamlit deploy
 #from PyPDF2 import PdfReader
 # from langchain_text_splitters import RecursiveCharacterTextSplitter
 # from langchain_community.vectorstores import FAISS
@@ -66,5 +67,5 @@ if file is not None:
 else:# for demo purpose
     user_question = st.text_input("Let's chat! You can talk to me here.")
     if user_question:
-        response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my GitHub: [GitHub Link Here]."
+        response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my GitHub: https://github.com/xiaonanshi/chatbot."
         st.write(response)
