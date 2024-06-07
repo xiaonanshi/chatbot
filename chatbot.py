@@ -10,18 +10,28 @@ import streamlit as st
 
 #Pass your key here
 OPENAI_API_KEY = "OPENAI_API_KEY"
-#Upload PDF files
-st.markdown(
-    """
-    <h2 style='text-align: center;'>Nan's Chatbot</h2>
-    """,
-    unsafe_allow_html=True
-)
 
+custom_css = '''
+<style>
+h2 {
+    text-align: center;
+}
+</style>
+'''
+
+# Inject the custom CSS into the Streamlit app
+st.markdown(custom_css, unsafe_allow_html=True)
+
+st.header("Nan's Chatbot")
+st.write("Welcome to my chatbot, powered by the OpenAI API and deployed using Streamlit! This chatbot allows you to upload your documents, train it specifically on your content, and ask related questions.")
+# Inject the custom CSS into the Streamlit app
+st.markdown(custom_css, unsafe_allow_html=True)
+#Upload PDF files
 with  st.sidebar:
     st.title("Hi, there!")
     st.write("I'm Nan's first chatbot")
-    file = st.file_uploader(" Upload a PDf file and start asking questions", type="pdf")
+    file = st.file_uploader(" Upload function is currently unavailable", type="pdf")
+    #file = st.file_uploader(" Upload a PDf file and start asking questions", type="pdf")
 
 
 #Extract the text
@@ -69,6 +79,6 @@ if file is not None:
 else:# for demo purpose
     user_question = st.text_input("Let's chat! You can talk to me here.")
     if user_question:
-        response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my GitHub: https://github.com/xiaonanshi/chatbot."
+        response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my [GitHub](https://github.com/xiaonanshi/chatbot)."
         st.write(response)
 
