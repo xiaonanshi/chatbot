@@ -1,3 +1,5 @@
+# This chatbot script is adapted from the example provided by @Aakriti E-Learning Academy on Udemy
+
 import streamlit as st
 #comment all following for streamlit deploy
 #from PyPDF2 import PdfReader
@@ -70,4 +72,3 @@ else:# for demo purpose
         response = "This chatbot uses the OpenAI API, and currently, I don't have sufficient credits to provide a full experience. However, you can check out the script and code on my GitHub: https://github.com/xiaonanshi/chatbot."
         st.write(response)
 
-#original code from @Aakriti E-Learning Academy on Udemy
